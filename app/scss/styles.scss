@@ -329,5 +329,55 @@ body {
   }
 }
 
-.title {
+.designer {
+  padding: 150px 0 230px;
+
+  &__inner {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 404px;
+  }
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: vars.$color-text-muted;
+  }
+
+  &__box {
+    position: relative;
+    text-align: center;
+  }
+  &__img {
+   margin-bottom: 40px;
+  }
+  &__caption {
+    font-size: 20;
+    @extend %lora-400;
+    color: vars.$color-primary;
+    padding: 20px 18px;
+    border: 3px solid vars.$bg-primary;
+    max-width: 302px;
+    position: absolute;
+    top: 178px;
+    top: 178px;
+    left: -50%;
+    transform: translateX(33%);
+    background-color: white;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 93px;
+  }
 }
+

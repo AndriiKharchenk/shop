@@ -4,11 +4,26 @@
 @use 'vars';
 
 body {
-	@extend %opensans-400;
-	font-size: 20px;
-	color: vars.$color-accent;
-	line-height: 1.3;
+  @extend %opensans-400;
+  font-size: 20px;
   color: vars.$color-accent;
+  line-height: 1.3;
+  color: vars.$color-accent;
+}
+
+.title {
+  text-transform: uppercase;
+  @extend %lora-400;
+  margin-bottom: 50px;
+  font-size: 45px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  color: vars.$color-text-muted;
+  padding: 10px 65px;
+  border: 1px solid vars.$color-text-muted;
 }
 
 .promo {
@@ -21,130 +36,134 @@ body {
 }
 
 .header {
-	text-transform: uppercase;
-	font-size: 16px;
-	padding: 20px 0 40px;
-	color: vars.$color-primary;
-	&__inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-	}
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 20px 0 40px;
+  color: vars.$color-primary;
 
-	&__logo {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 15px;
-	}
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-	&__lang {
-		display: flex;
-		&--active {
-			@extend %opensans-700;
-		}
-	}
+  &__logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
-	&__actions {
-		display: flex;
-		gap: 20px;
-		align-items: center;
-	}
+  &__lang {
+    display: flex;
+
+    &--active {
+      @extend %opensans-700;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 .logo {
-	display: inline-block;
+  display: inline-block;
 }
 
 .menu {
-	&__list {
-		display: flex;
-		gap: 30px;
-	}
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
 
-	&__item {
-		font-size: 16px;
-	}
+  &__item {
+    font-size: 16px;
+  }
 }
 
 .footer {
   font-size: 16px;
   color: vars.$color-text-muted;
-	&__menu-list {
-		display: flex;
+
+  &__menu-list {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 55px 0 44px;
     margin-bottom: 50px;
     border-bottom: 1px solid vars.$bg-primary;
-	}
+  }
 
-	&__menu-link {
+  &__menu-link {
     border-bottom: 1px solid vars.$bg-primary;
   }
 
-	&__elements {
+  &__elements {
     display: flex;
     justify-content: space-between;
     gap: 83px;
     margin-bottom: 45px;
   }
 
-	&__elements-title {
+  &__elements-title {
     opacity: 0.5;
     margin-bottom: 20px;
   }
 
-	&__elements-list {
+  &__elements-list {
     margin-bottom: 5px;
   }
 
-	&__adress {
+  &__adress {
     font-style: normal;
   }
 
-	&__social-list {
+  &__social-list {
     display: flex;
     gap: 10px;
   }
 
-	&__form {
+  &__form {
     width: 250px;
     position: relative;
   }
 
-	&__form-input {
+  &__form-input {
     display: block;
     width: 100%;
     border: none;
     border-bottom: 1px solid vars.$bg-primary;
     color: vars.$color-text-muted;
     padding: 1px 0 5px;
+
     &::placeholder {
       color: vars.$color-text-muted;
     }
   }
 
-	&__form-btn {
+  &__form-btn {
     position: absolute;
-    padding: 0 0 0 30px;
+    padding: 20px 0 10px 30px;
     right: 0;
-    bottom: 5px;
+    bottom: 0;
   }
 
-	&__bottom {
+  &__bottom {
     background-color: vars.$bg-primary;
   }
 
-	&__bottom-inner {
+  &__bottom-inner {
     display: flex;
     justify-content: space-between;
     padding: 7px 27px 9px;
     font-size: 11px;
     color: vars.$color-primary;
   }
-	
-	&__bottom-list {
+
+  &__bottom-list {
     display: flex;
     gap: 15px;
   }
@@ -153,13 +172,13 @@ body {
     padding-left: 15px;
   }
 
-	&__bottom-item + &__bottom-item {
+  &__bottom-item+&__bottom-item {
     border-left: 1px solid vars.$color-primary;
   }
 }
 
 .top {
-  min-height:calc(100vh - 159px);
+  min-height: calc(100vh - 155px);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -196,15 +215,15 @@ body {
 }
 
 .new-collection {
-  
+
   background-image: url(../images/new-collection-decor.svg);
-    background-repeat: no-repeat;
-    background-position: 234px -167px;
+  background-repeat: no-repeat;
+  background-position: 234px -167px;
 
   &__inner {
     display: flex;
     padding: 150px 0;
-    }
+  }
 
   &__content {
     padding: 75px 40px 0 40px;
@@ -213,29 +232,19 @@ body {
     flex-direction: column;
   }
 
-  &__title {
-    @extend %lora-400;
-    margin-bottom: 50px;
-    font-size: 45px;
-  }
-
-  &__text {
+  &__descr {
     color: vars.$color-text-muted;
   }
 
-  &__text + &__text {
+  &__text+&__text {
     margin-top: 20px;
   }
 
   &__link {
-    display: inline-block;
-    font-size: 16px;
-    color: vars.$color-text-muted;
-    padding: 10px 65px;
-    border: 1px solid vars.$color-text-muted;
     margin-top: auto;
     align-self: flex-start;
   }
+
   &__img {
     margin-top: 75px;
   }
@@ -246,12 +255,14 @@ body {
     padding-right: 40px;
     display: flex;
   }
+
   &__box-img {
     position: absolute;
     top: 0;
     left: -75px;
     max-width: fit-content;
   }
+
   &__caption {
     max-width: 293px;
     margin-top: auto;
@@ -260,6 +271,63 @@ body {
   }
 }
 
+.join-us {
+  background-color: vars.$bg-primary;
 
+  &__inner {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+  }
 
+  &__img {
+    max-width: 540px;
+    width: 100%;
+  }
 
+  &__box {
+    padding: 40px 0 40px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: vars.$color-primary;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    padding: 10px 0;
+    color: vars.$color-text-muted;
+    background-color: transparent;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 13px 229px;
+    background-color: vars.$color-accent;
+    color: #ffffff;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  &__form-caption {
+    font-size: 11px;
+    color: vars.$color-primary;
+  }
+}
+
+.title {
+}

@@ -321,6 +321,8 @@ body {
     color: #ffffff;
     border-radius: 3px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
   }
 
   &__form-caption {
@@ -331,11 +333,21 @@ body {
 
 .designer {
   padding: 150px 0 230px;
+  position: relative;
+
+  &__decor {
+    position: absolute;
+    top: -225px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
 
   &__inner {
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
+    
   }
 
   &__content {
@@ -345,7 +357,7 @@ body {
   &__texts {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 35px;
   }
 
   &__text {
@@ -410,8 +422,6 @@ body {
   &__list {
     column-count: 2;
     column-gap: 80px;
-    
-    
   }
 
   &__item {
@@ -428,6 +438,57 @@ body {
      }
   }
 }
+
+.our-blog {
+  padding: 150px 0 100px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 280px 330px;
+    grid-template-rows: 1fr 1fr;
+    gap: 19px;
+    padding: 0 40px;
+    background-image: url(../images/our-blog-decor.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    margin-bottom: 50px;
+    max-width: 403px;
+  }
+
+  &__box-right {
+    grid-row: span 2;
+    align-self: center;
+    margin-top: -90px;
+  }
+
+  &__box-img {
+    margin-bottom: 20px;
+  }
+
+  &__box-link {
+    @extend %lora-400;
+    font-size: 20px;
+    color: vars.$color-text-muted;
+  }
+
+  &__box-date {
+    padding-top: 5px;
+    @extend %opensans-300;
+    font-size: 16px;
+    color: vars.$color-primary;
+  }
+
+  &__box-bottom {
+    grid-column: span 2;
+    margin-left: auto;
+  }
+}
+
 
 
 

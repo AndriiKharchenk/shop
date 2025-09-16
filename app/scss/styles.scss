@@ -489,6 +489,63 @@ body {
   }
 }
 
+.appointment {
+  padding: 50px 0 128px;
+  background-image: url(../images/appointment-decor.svg);
+  background-repeat: no-repeat;
+  background-position: center 105px;
+  &__inner {
+    padding: 0 40px;
+  }
+  &__title {
+    font-size: 45px;
+    margin-bottom: 77px;
+    text-align: center;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-title {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 80px;
+  }
+  &__form-text {
+    @extend %opensans-700;
+    font-size: 20px;
+    color: vars.$color-text-muted;
+    margin-bottom: 30px;
+  }
+  &__input {
+    color: vars.$color-text-muted;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+  &__btn {
+    text-transform: uppercase;
+    padding: 13px 244px;
+    margin-top: auto;
+    background-color: vars.$color-accent;
+    border-radius: 3px;
+    color: #ffffff;
+  }
+
+}
+
+
+
 
 
 

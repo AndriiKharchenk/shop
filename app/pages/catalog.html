@@ -1,0 +1,325 @@
+<!--=include head.html -->
+<!--=include promo.html -->
+<!--=include header.html -->
+<main class="main">
+  <!--=include breadcrumbs.html -->
+  <section class="catalog">
+    <div class="container">
+      <div class="catalog__top">
+        <div class="catalog__view-mode">
+          <p class="view-mode__text">View as</p>
+          <ul class="view-mode__list">
+            <li class="view-mode__item">
+              <button class="view-mode__btn view-mode__btn-grid" aria-label="view-grid" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#catalog-grid"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="view-mode__item">
+              <button class="view-mode__btn view-mode__btn-line" aria-label="view-line" type="button">
+                <svg width="20" height="20" aria-label="view-line">
+                  <use xlink:href="images/sprite.svg#catalog-line"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <h1 class="catalog__title">WEDDING DRESSES</h1>
+        <div class="catalog-sort">
+          <form class="catalog-sort__form">
+            <div class="catalog-sort__wrapper">
+              <select class="catalog-sort__select" name="sort">
+                <option selected>Sort by popularity</option>
+                <option value="price">Price</option>
+                <option value="size">Size</option>
+                <option value="color">Color</option>
+                <option value="mood">Mood</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="catalog__content">
+        <aside class="catalog__filter" aria-label="sorting bar">
+          <form class="catalog__filter-form">
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">PRICE</p>
+              <div class="catalog__filterbox-items--range">
+                <div class="range">
+                  <div class="range__inputs">
+                    <label class="range__label">
+                      <input class="range__min" type="number" min="300" max="3000" step="100" />
+                    </label>
+                    -
+                    <label class="range__label">
+                      <input class="range__max" type="number" min="300" max="3000" step="100" />
+                    </label>
+                  </div>
+                  <div class="range__slider"></div>
+                  <ul class="range__list">
+                    <li class="range__item">300</li>
+                    <li class="range__item">1,000</li>
+                    <li class="range__item">1,500</li>
+                    <li class="range__item">2,000</li>
+                    <li class="range__item">2,500</li>
+                    <li class="range__item">3,000</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">SIZE</p>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="xs" />
+                  <span class="check-style"></span>
+                  XS
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="s" />
+                  <span class="check-style"></span>
+                  S
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="m" />
+                  <span class="check-style"></span>
+                  m
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="l" />
+                  <span class="check-style"></span>
+                  l
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="xl" />
+                  <span class="check-style"></span>
+                  Xl
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="size" value="xxl" />
+                  <span class="check-style"></span>
+                  Xxl
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">COLOR</p>
+              <div class="catalog__filterbox-items">
+                <label class="radio-lable">
+                  <input class="radio-box" type="radio" name="color" value="white" />
+                  <span class="radio-style"></span>
+                  WHITE
+                </label>
+                <label class="radio-lable">
+                  <input class="radio-box" type="radio" name="color" value="ivory" />
+                  <span class="radio-style"></span>
+                  IVORY
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">MATERIAL</p>
+              <div class="catalog__filterbox-items">
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="LACE" />
+                  <span class="check-style"></span>
+                  LACE
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="SILK" />
+                  <span class="check-style"></span>
+                  SILK
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="CREPE" />
+                  <span class="check-style"></span>
+                  CREPE
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="SATIN" />
+                  <span class="check-style"></span>
+                  SATIN
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="EMBROIDERY" />
+                  <span class="check-style"></span>
+                  EMBROIDERY
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="materials" value="ECO" />
+                  <span class="check-style"></span>
+                  ECO
+                </label>
+              </div>
+            </div>
+            <div class="catalog__filterbox">
+              <p class="catalog__filterbox-title">STYLE</p>
+              <div class="catalog__filterbox-items catalog__filterbox-items--line">
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="ALL" />
+                  <span class="check-style"></span>
+                  ALL
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="BOHO" />
+                  <span class="check-style"></span>
+                  BOHO
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="ROMANTIC" />
+                  <span class="check-style"></span>
+                  ROMANTIC
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="ELEGANT" />
+                  <span class="check-style"></span>
+                  ELEGANT
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="VINTAGE" />
+                  <span class="check-style"></span>
+                  VINTAGE
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="SIMPLE" />
+                  <span class="check-style"></span>
+                  SIMPLE
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="MODERN" />
+                  <span class="check-style"></span>
+                  MODERN
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="FORMAL" />
+                  <span class="check-style"></span>
+                  FORMAL
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="PRINCESS" />
+                  <span class="check-style"></span>
+                  PRINCESS
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="GLAMOROUS" />
+                  <span class="check-style"></span>
+                  GLAMOROUS
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="MODEST" />
+                  <span class="check-style"></span>
+                  MODEST
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="CASUAL" />
+                  <span class="check-style"></span>
+                  CASUAL
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="BEACH" />
+                  <span class="check-style"></span>
+                  BEACH
+                </label>
+                <label class="checkbox-lable">
+                  <input class="check-box" type="checkbox" name="style" value="ELOPEMENT" />
+                  <span class="check-style"></span>
+                  ELOPEMENT
+                </label>
+              </div>
+            </div>
+            <button class="catalog__filter-btn" type="reset">CLEAN ALL</button>
+          </form>
+        </aside>
+        <div class="catalog__content-box">
+          <div class="catalog__content-items view-mode__container view-mode__container--grid">
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-1.avif" type="image/avif" />
+                <source srcset="images/catalog-1.webp" type="image/webp" />
+                <img src="images/catalog-1.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-2.avif" type="image/avif" />
+                <source srcset="images/catalog-2.webp" type="image/webp" />
+                <img src="images/catalog-2.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-3.avif" type="image/avif" />
+                <source srcset="images/catalog-3.webp" type="image/webp" />
+                <img src="images/catalog-3.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-4.avif" type="image/avif" />
+                <source srcset="images/catalog-4.webp" type="image/webp" />
+                <img src="images/catalog-4.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-5.avif" type="image/avif" />
+                <source srcset="images/catalog-5.webp" type="image/webp" />
+                <img src="images/catalog-5.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-6.avif" type="image/avif" />
+                <source srcset="images/catalog-6.webp" type="image/webp" />
+                <img src="images/catalog-6.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-7.avif" type="image/avif" />
+                <source srcset="images/catalog-7.webp" type="image/webp" />
+                <img src="images/catalog-7.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-8.avif" type="image/avif" />
+                <source srcset="images/catalog-8.webp" type="image/webp" />
+                <img src="images/catalog-8.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+            <div class="catalog__content-item">
+              <picture>
+                <source srcset="images/catalog-9.avif" type="image/avif" />
+                <source srcset="images/catalog-9.webp" type="image/webp" />
+                <img src="images/catalog-9.jpg" width="270" height="400" loading="lazy" alt="Alt text" />
+              </picture>
+              <p class="catalog__item-title">Blanca</p>
+              <p class="catalog__item-price">€ 1,850.00</p>
+            </div>
+          </div>
+          <!--=include pagination.html -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--=include footer.html -->
+<!--=include mainjs.html -->

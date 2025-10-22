@@ -4,6 +4,7 @@
 @use '../../node_modules/nouislider/dist/nouislider.css';
 @use 'global';
 @use 'vars';
+@use 'media';
 
 body {
   @extend %opensans-400;
@@ -56,9 +57,13 @@ body {
     margin-bottom: 15px;
   }
 
+  &__btn {
+    display: none;
+  }
+
   &__lang {
     display: flex;
-
+    margin-right: 290px;
     &--active {
       @extend %opensans-700;
     }
@@ -76,6 +81,7 @@ body {
 }
 
 .menu {
+  display: flex;
   &__list {
     display: flex;
     gap: 30px;
@@ -150,7 +156,7 @@ body {
     position: absolute;
     padding: 20px 0 10px 30px;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
   }
 
   &__bottom {
@@ -285,6 +291,12 @@ body {
     width: 100%;
   }
 
+  &__img-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   &__box {
     padding: 40px 0 40px;
   }
@@ -395,6 +407,8 @@ body {
 
 .our-advantages {
   background-color: vars.$bg-primary;
+  position: relative;
+  overflow-x: clip;
 
   &__wrapper {
     display: flex;
@@ -417,6 +431,7 @@ body {
   &__inner {
     padding: 64px 130px 34px 0;
     margin-left: auto;
+    position: relative;
   }
 
   &__list {
@@ -1803,8 +1818,7 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  .title {
-  }
+
   .radio-lable:has(.radio-box:checked) + &__info-delprice {
     opacity: 1;
   }
@@ -1823,7 +1837,6 @@ body {
     margin-top: 8px;
     opacity: 0.4;
     font-size: 14px;
-    
   }
 
   &__info-delprice {
@@ -1836,6 +1849,7 @@ body {
     flex-direction: column;
     gap: 24px;
   }
+
   &__infobox-paycard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1880,13 +1894,13 @@ body {
     justify-content: space-between;
     font-size: 16px;
     background-color: vars.$bg-primary;
-
   }
 
   &__details-quantity {
   }
   &__details-del {
   }
+
   &__item {
     padding: 30px 0;
     margin: 0 10px;
@@ -1896,9 +1910,9 @@ body {
     gap: 20px;
   }
   &__item-img {
-   min-width: 140px;
+    min-width: 140px;
   }
- 
+
   &__item-box {
     position: relative;
     width: 100%;

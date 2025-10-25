@@ -53,6 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
         nextEl: '.reviews__arrow-next',
         prevEl: '.reviews__arrow-prev',
       },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 6,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 8,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 12,
+          spaceBetween: 16,
+        },
+      },
     });
   }
 

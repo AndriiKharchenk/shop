@@ -54,13 +54,15 @@ function images() {
 
 function styles() {
     return src('app/scss/*.scss')
-    .pipe(autoprefixer({ 
-      overrideBrowsersList: ['last 10 versions']
-     }))
-    .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+      .pipe(
+        autoprefixer({
+          overrideBrowsersList: ['last 10 versions'],
+        })
+      )
+      .pipe(concat('style.min.css'))
+      .pipe(scss({ style: 'compressed' }))
+      .pipe(dest('app/css'))
+      .pipe(browserSync.stream());
 }
 
 function scripts() {

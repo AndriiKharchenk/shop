@@ -6,22 +6,34 @@
   <section class="product">
     <div class="container">
       <div class="product__inner">
-        <div class="product__images">
-          <picture>
-            <source srcset="images/product-1.avif" type="image/avif" />
-            <source srcset="images/product-1.webp" type="image/webp" />
-            <img src="images/product-1.jpg" width="219" height="369" loading="lazy" alt="Alt text" />
-          </picture>
-          <picture>
-            <source srcset="images/product-2.avif" type="image/avif" />
-            <source srcset="images/product-2.webp" type="image/webp" />
-            <img src="images/product-2.jpg" width="483" height="757" loading="lazy" alt="Alt text" />
-          </picture>
-          <picture>
-            <source srcset="images/product-3.avif" type="image/avif" />
-            <source srcset="images/product-3.webp" type="image/webp" />
-            <img src="images/product-3.jpg" width="219" height="369" loading="lazy" alt="Alt text" />
-          </picture>
+        <div class="slider-mobile swiper">
+          <div class="product__images swiper-wrapper">
+            <picture class="swiper-slide">
+              <source srcset="images/product-1.avif" type="image/avif" />
+              <source srcset="images/product-1.webp" type="image/webp" />
+              <img src="images/product-1.jpg" width="219" height="369" loading="lazy" alt="Alt text" />
+            </picture>
+            <picture class="swiper-slide">
+              <source srcset="images/product-2.avif" type="image/avif" />
+              <source srcset="images/product-2.webp" type="image/webp" />
+              <img src="images/product-2.jpg" width="483" height="757" loading="lazy" alt="Alt text" />
+            </picture>
+            <picture class="swiper-slide">
+              <source srcset="images/product-3.avif" type="image/avif" />
+              <source srcset="images/product-3.webp" type="image/webp" />
+              <img src="images/product-3.jpg" width="219" height="369" loading="lazy" alt="Alt text" />
+            </picture>
+          </div>
+          <button class="product__arrow product__arrow-prev" type="button" aria-label="prev image">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="product__arrow product__arrow-next" type="button" aria-label="next image">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
         </div>
         <div class="product__content">
           <h1 class="title product__title">NAOMI</h1>
